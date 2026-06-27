@@ -1,5 +1,17 @@
 import LenisProvider from "@/providers/useLenis";
 import "./globals.css";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import Navbar from "@/components/Navbar";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+});
 
 export const metadata = {
   title: "Utkarsh Verma's Portfolio",
@@ -8,8 +20,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col font-sans">
+        <Navbar />
         <LenisProvider>{children}</LenisProvider>
       </body>
     </html>

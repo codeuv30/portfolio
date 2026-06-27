@@ -9,7 +9,7 @@ const CARD_H = 280;
 const SCALE = 1.35;
 const CARD_GAP = 1.35;
 
-const DURATION = 15;
+const DURATION = 20;
 
 const TRACK_H = CARD_H * SCALE;
 
@@ -27,6 +27,7 @@ const InfiniteCarousel = ({ projects }) => {
       ease: "none",
       duration: DURATION,
       repeat: -1,
+      yoyo: true
     });
 
     return () => {
@@ -38,7 +39,7 @@ const InfiniteCarousel = ({ projects }) => {
     <div
       className="overflow-hidden"
       style={{
-        padding: `${TRACK_H * 0.2}px 0 24px`,
+        padding: `${TRACK_H * 0.45}px 0 24px`,
       }}
     >
       <div

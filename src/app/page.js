@@ -5,7 +5,7 @@ import { projects } from '@/data/projects'
 
 const page = () => {
   return (
-    <main className='h-screen w-full bg-[#010101] flex items-center'>
+    <main className='h-screen w-full pt-[5rem] flex'>
       <InfiniteCarousel projects={projects} />
     </main>
   )
